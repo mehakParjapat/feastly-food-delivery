@@ -1,0 +1,7 @@
+import { restaurantController } from '../../../../controllers/restaurantController';
+import { withErrorHandler } from '../../../../utils/handler';
+
+export const GET = withErrorHandler(async (request, { params }) => {
+  const { id } = await params;
+  return restaurantController.getById(id);
+});
