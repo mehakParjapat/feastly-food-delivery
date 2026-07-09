@@ -13,7 +13,7 @@ export const orderService = {
     const itemsData = payload.items.map((i) => {
       const food = foodMap.get(i.foodId);
       if (!food) {
-        const err = new Error(`Food ${i.foodId} not found`);
+        const err = new Error(`Food ${i.foodId} not found `);
         err.status = 400;
         throw err;
       }
